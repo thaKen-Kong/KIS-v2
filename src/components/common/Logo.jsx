@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { logo } from "../../data/images";
 
 export function Logo() {
@@ -5,7 +6,7 @@ export function Logo() {
         <>
             <div className="logo-section">
                 <img src={logo} alt="KIS logo" />
-                <h1>KIS</h1>
+                <Link className="white" style={{textDecorationStyle:"none"}}to="/"><h1>KIS</h1></Link>
             </div>
         </>
     );

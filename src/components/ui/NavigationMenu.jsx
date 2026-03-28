@@ -1,9 +1,21 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { navigationItems } from "../../data/navigation"
 import { Link } from "react-router-dom"
 
 export function NavigationMenu() {
     const [isOpen, setIsOpen] = useState(false)
+
+    // Close panel when page loads
+    useEffect(() => {
+        setIsOpen(false)
+    }, [])
+
+    // Handle backdrop click to close panel
+    const handleBackdropClick = (e) => {
+        if (e.target === e.currentTarget) {
+            setIsOpen(false)
+        }
+    }
 
     return (
         <>
@@ -20,6 +32,14 @@ export function NavigationMenu() {
                         <span />
                     </button>
                 </div>
+
+                {/* Backdrop overlay */}
+                {isOpen && (
+                    <div 
+                        className="nav-mobile__backdrop" 
+                        onClick={handleBackdropClick}
+                    />
+                )}
 
                 <aside
                     className={`nav-mobile__panel${isOpen ? " is-open" : ""}`}
@@ -57,6 +77,7 @@ export function NavigationMenu() {
                                                     key={`${item.label}-${child.label}-${childIndex}`}
                                                     className="nav-mobile__sublink"
                                                     to={child.path}
+                                                    onClick={() => setIsOpen(false)}
                                                     style={{ animationDelay: `${childIndex * 0.05}s` }}
                                                 >
                                                     {child.label || item.label}
@@ -68,13 +89,15 @@ export function NavigationMenu() {
                             }
 
                             return (
-                                <a
+                                <Link
                                     key={item.label}
                                     className="nav-mobile__link nav-mobile__item"
                                     style={{ animationDelay: `${index * 0.05}s` }}
+                                    to='/'
+                                    onClick={() => setIsOpen(false)}
                                 >
                                     {item.label}
-                                </a>
+                                </Link>
                             )
                         })}
                     </nav>

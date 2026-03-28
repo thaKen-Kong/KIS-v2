@@ -26,6 +26,7 @@ export function UpcomingEventsSection() {
                         >
                             <Label text={event.title} classname="green shadow diminished"/>
                             <p>{event.content}</p>
+                            <ThemedButton className="outline btn" text="Read More"/>
                         </MediaCard>
                     ))}
                 />

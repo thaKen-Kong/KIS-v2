@@ -13,7 +13,7 @@ const newsList = [
 export function LatestNewsSection() {
     return (
         <>
-            <PageContainer className="green vbox vertical-padding">
+            <PageContainer className="green vbox vertical-padding shadow-box">
                 
                 <SeparationContainer className="vbox">
                     <Label text="NEWEST NEWS" classname="white shadow"/>
@@ -27,7 +27,7 @@ export function LatestNewsSection() {
                         >
                             <Label text={news.title} classname="white shadow"/>
                             <p>{news.content}</p>
-                            <button className="btn theme stretched">Read More</button>
+                            <button className="btn stretched outline white">Read More</button>
                         </MediaCard>
                     ))}
                     <ThemedButton className="btn white outline stretched" text="SHOW MORE NEWS"/>

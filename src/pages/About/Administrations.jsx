@@ -4,10 +4,14 @@ import { PageHeaderUi } from "../../components/common/PageHeader";
 export function AdministrationsPages() {
   return (
     <>
-      <PageHeaderUi text="Administration" />
-      <PageContainer className="box-shadow vertical-padding vbox">
+      <div className="page-item" style={{ animationDelay: '0s' }}>
+        <PageHeaderUi text="Administration" />
+      </div>
+      <div className="page-item" style={{ animationDelay: '0.1s' }}>
+        <PageContainer className="box-shadow vertical-padding vbox">
 
-      </PageContainer>
+        </PageContainer>
+      </div>
     </>
 
   )

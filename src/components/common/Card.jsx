@@ -1,3 +1,5 @@
+import { bg_1 } from "../../data/images"
+
 export function VariantCard ({children, variant = ""}) {
     return (
         <>
@@ -25,7 +27,7 @@ export function NewsCard({variant = ''}){
         <>
             <div className={`card media ${variant}`}>
                 <div className="card-media">
-                    {imageSrc ? <img src={imageSrc} alt={imageAlt} /> : null}
+                    {imageSrc ? <img src={bg_1} alt={imageAlt} /> : null}
                 </div>
                 <div className="card-body">
                     {children}
