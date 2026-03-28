@@ -1057,6 +1057,11 @@
 
     /* MEDIA QUERY FOR MAX-WIDTH 300px */
     @media (max-width: 300px) {
+        .logo-section h1 {
+            font-size: 1rem;
+        }
+
+
         .navigation-panel {
             height: 35px;
             padding: 1px;
@@ -1289,6 +1294,239 @@
         }
     }
 
+    /* MEDIA QUERY FOR MAX-WIDTH 320px */
+    @media (max-width: 320px) {
+        .navigation-panel {
+            height: 36px;
+            padding: 1px;
+        }
+
+        .nav-mobile {
+            padding: 0 6px;
+        }
+
+        .nav-mobile__hamburger {
+            width: 30px;
+            height: 25px;
+            gap: 4px;
+            padding: 5px;
+        }
+
+        .nav-mobile__hamburger span {
+            height: 1.5px;
+        }
+
+        .nav-mobile__brand {
+            font-size: 0.78rem;
+        }
+
+        .nav-mobile__panel {
+            width: 80vw;
+            max-width: 290px;
+        }
+
+        .nav-mobile__header {
+            padding: 11px 9px 8px;
+        }
+
+        .nav-mobile__header h2 {
+            font-size: 0.82rem;
+        }
+
+        .nav-mobile__close {
+            width: 25px;
+            height: 25px;
+            font-size: 0.95rem;
+        }
+
+        .nav-mobile__list {
+            gap: 9px;
+            padding: 9px 9px 16px;
+        }
+
+        .nav-mobile__link {
+            font-size: 0.82rem;
+            padding: 4px 0;
+        }
+
+        .nav-mobile__chevron {
+            font-size: 0.82rem;
+        }
+
+        .nav-mobile__submenu {
+            gap: 6px;
+            padding: 4px 0 6px 9px;
+        }
+
+        .nav-mobile__sublink {
+            font-size: 0.77rem;
+            padding: 2px 0;
+        }
+
+        .page-container {
+            min-height: 85px;
+            margin-bottom: 22px;
+            padding: 16px 7px;
+        }
+
+        .page-container.vertical-padding {
+            padding: 16px 7px;
+        }
+
+        .page-header-ui {
+            height: 42vh;
+        }
+
+        .page-header-ui .label {
+            font-size: 1.3rem;
+        }
+
+        .page-item {
+            animation: page-fade-in 0.4s ease-out both;
+        }
+
+        .card {
+            padding: 13px;
+        }
+
+        .card-body {
+            gap: 9px;
+        }
+
+        .card.media.variant_two,
+        .news-card.media.variant_two {
+            min-height: 340px;
+        }
+
+        .card.media.variant_two .card-media,
+        .news-card.media.variant_two .card-media {
+            min-height: 340px;
+        }
+
+        .card.media.variant_two .card-media img,
+        .news-card.media.variant_two .card-media img {
+            opacity: 0.72;
+        }
+
+        .card.media.variant_two .card-body,
+        .news-card.media.variant_two .card-body {
+            padding: 13px;
+            gap: 11px;
+        }
+
+        .media-card h1,
+        .card h1 {
+            font-size: 1.05rem;
+        }
+
+        .media-card h2,
+        .card h2 {
+            font-size: 0.98rem;
+        }
+
+        .media-card p,
+        .card p {
+            font-size: 0.82rem;
+        }
+
+        .btn {
+            padding: 9px 13px;
+            font-size: 0.77rem;
+        }
+
+        .label {
+            font-size: 0.88rem;
+        }
+
+        .separate {
+            gap: 13px;
+            padding: 13px 7px;
+        }
+
+        .item-container {
+            padding: 11px;
+        }
+
+        .text-container {
+            padding: 11px;
+        }
+
+        .two-container {
+            gap: 13px;
+        }
+
+        .twin {
+            padding: 11px;
+        }
+
+        .footer-content {
+            gap: 17px;
+        }
+
+        .footer-brand p {
+            font-size: 0.82rem;
+            margin: 5px 0 0;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            font-size: 0.92rem;
+            margin-bottom: 3px;
+        }
+
+        .footer-bottom {
+            font-size: 0.77rem;
+            margin-top: 17px;
+            padding-top: 13px;
+        }
+
+        .header-section {
+            padding: 7px;
+        }
+
+        .logo-section {
+            gap: 7px;
+        }
+
+        .logo-section img {
+            width: 42px;
+        }
+
+        .scrollable {
+            gap: 9px;
+            padding: 9px 7px;
+        }
+
+        .scrollable-item {
+            min-width: 160px;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+        }
+
+        h2 {
+            font-size: 1.05rem;
+        }
+
+        h3 {
+            font-size: 0.98rem;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: 0.92rem;
+        }
+
+        p {
+            font-size: 0.82rem;
+        }
+
+        body {
+            font-size: 0.82rem;
+        }
+    }
 
 
 
