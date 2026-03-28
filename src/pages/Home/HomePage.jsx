@@ -1,7 +1,11 @@
+import { Bubble } from "../../components/common/Bubble";
 import { PageContainer, SeparationContainer } from "../../components/common/Container";
 import { HeroSection } from "../../layouts/sections/HeroSection";
+import { InteractWithUsSection } from "../../layouts/sections/InteractWithUsSection";
 import { LatestNewsSection } from "../../layouts/sections/LatestNewsSection";
 import { OverviewSection } from "../../layouts/sections/OverviewSection";
+import { SneekPeekSection } from "../../layouts/sections/SneekPeakSection";
+import { UpcomingEventsSection } from "../../layouts/sections/UpcomingEventsSection";
 
 export function HomePage({children}) {
     return (
@@ -10,7 +14,12 @@ export function HomePage({children}) {
             <HeroSection />
             <OverviewSection />
             <LatestNewsSection />
+            <UpcomingEventsSection />
+            <SneekPeekSection />
+            <InteractWithUsSection />
+            <Bubble />
         </SeparationContainer>
         </>
     )
 }
+

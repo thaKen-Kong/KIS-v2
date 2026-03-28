@@ -11,7 +11,7 @@ export function OverviewSection( {children} ) {
                     <TextContainer className="borderized left-and-right-border rounded">
                         <p>kenkentorres</p>
                     </TextContainer>
-                    <ItemContainer className="round video ">
+                    <ItemContainer className="round frame ">
                         <iframe  src="https://www.youtube.com/embed/SJTpYdrAVfM?si=KBRnoignqCPh63Z3" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullscreen></iframe>
                     </ItemContainer>
                     <TwoContainer 

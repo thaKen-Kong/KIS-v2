@@ -57,3 +57,17 @@ export function TwoContainer({leftTitle, leftContent, rightTitle, rightContent, 
         </>
     )
 }
+
+export function HorizontalScrollableContainer({items = [], className=""}) {
+    return (
+        <>
+            <div className={`scrollable ${className}`.trim()}>
+                {items.map((item, index) => (
+                    <div className="scrollable-item" key={index}>
+                        {item}
+                    </div>
+                ))}
+            </div>
+        </>
+    )
+}

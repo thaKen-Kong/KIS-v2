@@ -1,5 +1,11 @@
 
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,3 +14,6 @@
     font-style: normal;
 }
 
+body {
+    width: 100%;
+}
