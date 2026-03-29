@@ -27,12 +27,11 @@ export function LatestNewsSection() {
                         >
                             <Label text={news.title} classname="white shadow"/>
                             <p>{news.content}</p>
-                            <button className="btn stretched outline white">Read More</button>
+                            <ThemedButton className="btn stretched outline white card_btn">Read More</ThemedButton>
                         </MediaCard>
                     ))}
-                    <ThemedButton className="btn white outline stretched" text="SHOW MORE NEWS"/>
+                    <ThemedButton className="btn outline white contain" text="SHOW MORE NEWS"/>
                 </SeparationContainer>
-                
             </PageContainer>
         </>
     )
