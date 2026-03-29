@@ -5,7 +5,7 @@ import { Label } from "../../components/common/Text";
 export function OverviewSection( {children} ) {
     return (
         <>
-            <PageContainer className="vbox vertical-padding light-background">
+            <PageContainer className="vbox vertical-padding-extended fade-top fade-bottom light-background">
                 <SeparationContainer className="vbox">
                     <Label text="OVERVIEW" classname="lined-label green shadow"/>
                     <TextContainer className="borderized left-and-right-border rounded">

@@ -273,12 +273,17 @@
     }
 
     .page-container.light-background {
-        background-color: rgba(158, 196, 148, 0.2);
+        background-color: rgba(8, 193, 82, 0.2);
     }
 
     .page-container.vertical-padding {
         width: 100%;
         padding: 20px 10px;
+    }
+
+    .page-container.vertical-padding-extended {
+        width: 100%;
+        padding: 200px 10px;
     }
 
     .page-container.hero-section {
@@ -396,6 +401,10 @@
 
     .page-container.box-shadow {
         box-shadow: var(--kis-shadow);
+    }
+
+    .page-container .faded {
+        padding: 1000px 0px;
     }
 
     .page-container.green {
@@ -874,7 +883,7 @@
 
     .card-body .label {
         font-size: 0.9rem;
-        text-align: center;
+        text-align: center; 
     }
 
     .card-body p {
@@ -930,7 +939,11 @@
     }
 
     .gradient {
-        background: linear-gradient(to bottom, #ccff00 20%, #16c172 100%);
+        background: linear-gradient(to bottom, #ffff00 20%, #16c172 100%);
+    }
+
+    .gradient-45deg {
+        background: linear-gradient(to bottom, #ffff00 20%, #16c172 100%);
     }
 
     .space-between {
