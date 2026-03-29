@@ -18,3 +18,11 @@ export function SubtitleLabel({text, className=""}){
         </>
     )
 }
+
+export function Line( {className =""}) {
+    return (
+        <>
+            <span className={`lined ${className}`}></span>
+        </>
+    )
+}

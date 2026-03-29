@@ -6,7 +6,7 @@ export function PageHeaderUi({image , text, className=''}) {
         <>
             <div className={`page-header-ui ${className}`}>
                 <img src={bg_2} alt={text} />
-                <Label text={text} classname="white shadow diminished" />
+                <Label text={text} classname="gradient-45deg shadow thicken" />
             </div>
         </>
     )

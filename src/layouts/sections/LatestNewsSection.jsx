@@ -1,7 +1,7 @@
 import { ThemedButton } from "../../components/common/Button";
 import { MediaCard } from "../../components/common/Card";
 import { PageContainer, SeparationContainer } from "../../components/common/Container";
-import { Label } from "../../components/common/Text";
+import { Label, Line } from "../../components/common/Text";
 
 const newsList = [
     {image: "/images/news-1.jpg", imageAlt: "Students at KIS campus", title: "Campus Update", content: "Enrollment for the new term is now open. Check schedules and requirements."},
@@ -16,6 +16,7 @@ export function LatestNewsSection() {
             <PageContainer className="green vbox vertical-padding shadow-box">
                 
                 <SeparationContainer className="vbox">
+                    <Line className="white-line thin"/>
                     <Label text="NEWEST NEWS" classname="white shadow"/>
                     <p className="white-label">Stay updated with the latest campus news.</p>
                     {newsList.slice(0, 3).map((news, index) => (
@@ -31,6 +32,7 @@ export function LatestNewsSection() {
                         </MediaCard>
                     ))}
                     <ThemedButton className="btn outline white contain" text="SHOW MORE NEWS"/>
+                    <Line className="white-line thin"/>
                 </SeparationContainer>
             </PageContainer>
         </>

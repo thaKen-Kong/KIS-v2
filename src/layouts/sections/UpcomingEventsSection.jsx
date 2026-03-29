@@ -1,6 +1,6 @@
 import { HorizontalScrollableContainer, PageContainer, SeparationContainer } from "../../components/common/Container";
 import { MediaCard } from "../../components/common/Card";
-import { Label } from "../../components/common/Text";
+import { Label, Line } from "../../components/common/Text";
 import { ThemedButton } from "../../components/common/Button";
 
 const upcomingEvents = [
@@ -13,7 +13,9 @@ export function UpcomingEventsSection() {
     return (
         <>
             <PageContainer className="vertical-padding vbox">
+                
                 <SeparationContainer className="vbox">
+                <Line className="green-line "/>
                 <Label text="UPCOMING EVENTS" classname="green shadow"/>
                 <p className="grey-label">Get spoiled about the upcoming events in our school</p>
                 <HorizontalScrollableContainer
@@ -31,7 +33,9 @@ export function UpcomingEventsSection() {
                     ))}
                 />
                 <ThemedButton className="btn theme" text="View all Events"/>
+                <Line className="green-line "/>
                 </SeparationContainer>
+                
             </PageContainer>
         </>
     )
