@@ -1,6 +1,7 @@
 import { ThemedButton } from "../../components/common/Button";
 import { MediaCard } from "../../components/common/Card";
 import { PageContainer, SeparationContainer } from "../../components/common/Container";
+import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
 import { Label, Line } from "../../components/common/Text";
 
 const newsList = [
@@ -13,6 +14,7 @@ const newsList = [
 export function LatestNewsSection() {
     return (
         <>
+        <ScrollAnimationWrapper>
             <PageContainer className="green vbox vertical-padding shadow-box">
                 
                 <SeparationContainer className="vbox">
@@ -35,6 +37,7 @@ export function LatestNewsSection() {
                     <Line className="white-line thin"/>
                 </SeparationContainer>
             </PageContainer>
+        </ScrollAnimationWrapper>
         </>
     )
 }

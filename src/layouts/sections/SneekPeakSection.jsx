@@ -1,9 +1,11 @@
 import { ItemContainer, PageContainer, SeparationContainer } from "../../components/common/Container";
+import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
 import { Label } from "../../components/common/Text";
 
 export function SneekPeekSection() {
     return (
         <>
+        <ScrollAnimationWrapper>
             <PageContainer className="vbox vertical-padding-extended fade-top fade-bottom light-background">
                 <SeparationContainer className="vbox">
                     <Label classname="gradient-45deg shadow diminished lined-label" text="School at Glance" />
@@ -16,6 +18,7 @@ export function SneekPeekSection() {
                     </ItemContainer>
                 </SeparationContainer>
             </PageContainer>
+        </ScrollAnimationWrapper>
         </>
     )
 }

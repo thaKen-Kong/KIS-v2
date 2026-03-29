@@ -3,6 +3,8 @@ import { Logo } from "../common/Logo";
 import { Header } from "../ui/Header";
 import { NavigationMenu } from "../ui/NavigationMenu";
 import { Footer } from "../ui/Footer";
+import { ScrollAnimationWrapper } from "../common/ScrollAnimationWrapper";
+import { ScrollToTopButton } from "../common/ScrollToTopButton";
 
 export function MainLayout({children}) {
     return (
@@ -18,6 +20,9 @@ export function MainLayout({children}) {
 
             {/* FOOTER */}
             <Footer />
+
+            {/* SCROLL TO TOP BUTTON */}
+            <ScrollToTopButton />
         </>
     )
 }

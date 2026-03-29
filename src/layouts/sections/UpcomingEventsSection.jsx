@@ -2,6 +2,7 @@ import { HorizontalScrollableContainer, PageContainer, SeparationContainer } fro
 import { MediaCard } from "../../components/common/Card";
 import { Label, Line } from "../../components/common/Text";
 import { ThemedButton } from "../../components/common/Button";
+import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
 
 const upcomingEvents = [
     {image: "/images/event-1.jpg", imageAlt: "Orientation day", title: "Freshmen Orientation", content: "Meet your advisers and learn campus services."},
@@ -12,6 +13,7 @@ const upcomingEvents = [
 export function UpcomingEventsSection() {
     return (
         <>
+        <ScrollAnimationWrapper>
             <PageContainer className="vertical-padding vbox">
                 
                 <SeparationContainer className="vbox">
@@ -37,6 +39,7 @@ export function UpcomingEventsSection() {
                 </SeparationContainer>
                 
             </PageContainer>
+        </ScrollAnimationWrapper>
         </>
     )
 }

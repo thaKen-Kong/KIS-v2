@@ -1,10 +1,12 @@
 import { ThemedButton } from "../../components/common/Button";
 import { ItemContainer, PageContainer, SeparationContainer, TextContainer, TwoContainer } from "../../components/common/Container";
+import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
 import { Label } from "../../components/common/Text";
 
 export function OverviewSection( {children} ) {
     return (
         <>
+        <ScrollAnimationWrapper >
             <PageContainer className="vbox vertical-padding-extended fade-top fade-bottom light-background">
                 <SeparationContainer className="vbox">
                     <Label text="OVERVIEW" classname="lined-label gradient-45deg"/>
@@ -24,6 +26,7 @@ export function OverviewSection( {children} ) {
                     />
                 </SeparationContainer>
             </PageContainer>
+        </ScrollAnimationWrapper>
         </>
     )
 }

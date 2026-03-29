@@ -1,10 +1,12 @@
 import { ThemedButton } from "../../components/common/Button";
 import { PageContainer, SeparationContainer } from "../../components/common/Container";
+import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
 import { Label } from "../../components/common/Text";
 
 export function InteractWithUsSection() {
     return (
         <>
+        <ScrollAnimationWrapper>
             <PageContainer className="vbox vertical-padding">
                 <SeparationContainer className="vbox">
                     <Label text="INTERACT WITH US" classname="lined-label green shadow diminished"/>
@@ -35,6 +37,7 @@ export function InteractWithUsSection() {
                     </form>
                 </SeparationContainer>
             </PageContainer>
+        </ScrollAnimationWrapper>
         </>
     )
 }
