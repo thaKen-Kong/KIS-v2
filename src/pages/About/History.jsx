@@ -1,17 +1,96 @@
-import { PageContainer, SeparationContainer } from "../../components/common/Container";
+import { PageContainer, SeparationContainer, TimelineContainer } from "../../components/common/Container";
 import { PageHeaderUi } from "../../components/common/PageHeader";
+import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
+import { Label, Line } from "../../components/common/Text";
+
+const timelineData = [
+    {
+        year: "1962",
+        title: "Cavite Highland Institute Founded",
+        description: "Cavite Highland Institute came to birth on 1,200 sq. m. land donated by Eufemio V. Penano. Established through the efforts of visionary leaders: Ciriano Acuna, Lonesto Alcazar, and Alfredo Dimapilis.",
+        highlight: "School Founding"
+    },
+    {
+        year: "1960s",
+        title: "Early Years",
+        description: "Started as a private institution with only two teachers. Later renamed to Kaytitinga Academy under Mrs. Caridad Alvarez's supervision.",
+        highlight: "Private Institution"
+    },
+    {
+        year: "1971",
+        title: "Kaytitinga Barrio High School",
+        description: "School became a public high school. Miss Josefina De Guzman served as school head with Mrs. Mauricia R. Rolle as Head Teacher.",
+        highlight: "Public School Status"
+    },
+    {
+        year: "1974-1975",
+        title: "Institutional Growth",
+        description: "Renamed to Kaytitinga Barangay High School under Mr. Jose P. Varias. Remarkable improvements: new classrooms and additional teachers hired.",
+        highlight: "Expansion Phase"
+    },
+    {
+        year: "1978",
+        title: "Leadership Era of Mrs. Rolle",
+        description: "Mrs. Mauricia R. Rolle promoted to Principal. Her dedication contributed significantly to school development over many years.",
+        highlight: "Dedicated Leadership"
+    },
+    {
+        year: "1993",
+        title: "Kaytitinga National High School",
+        description: "School renamed in consonance with DECS aim for greater educational heights. New school buildings constructed, enrollment and teacher count increased.",
+        highlight: "National Status"
+    },
+    {
+        year: "1995-2005",
+        title: "Community-Driven Development",
+        description: "Teachers organized fundraising projects: concerts, drama festivals, and contests. Acquired modern equipment and built new facilities - Annex Building (1995) and Maliksi Building (2005).",
+        highlight: "Infrastructure Growth"
+    },
+    {
+        year: "2020-2021",
+        title: "COVID-19 Pandemic Response",
+        description: "Modular distance learning implemented as the primary learning delivery mode during the pandemic.",
+        highlight: "Crisis Adaptation"
+    },
+    {
+        year: "2022-2023",
+        title: "Blended Learning Phase",
+        description: "Transition to blended learning combining limited face-to-face and modular distance learning.",
+        highlight: "Hybrid Learning"
+    },
+    {
+        year: "2023-2024",
+        title: "Full Face-to-Face Resumption",
+        description: "Normal learning delivery implemented with full face-to-face instruction. Dr. Leoniza D. Varias, former teacher, appointed as new school head in March 2024.",
+        highlight: "Return to Normal"
+    }
+];
+
+const renderTimelineItem = (item) => (
+    <div>
+        <h3>{item.year}</h3>
+        <p><strong>{item.title}</strong></p>
+        <p>{item.description}</p>
+        <span>{item.highlight}</span>
+    </div>
+);
 
 export function HistoryPages() {
   return (
     <>
+    <ScrollAnimationWrapper>
     <SeparationContainer className="vbox">
       <div className="page-item" style={{ animationDelay: '0s' }}>
         <PageHeaderUi text="History" />
       </div>
       <PageContainer className="vbox vertical-padding">
-
+        <Line className="green-line"/>
+        <Label text="HOW IT STARTED?" classname="padded diminished green shadow"/>
+        <Line className="green-line"/>
+        <TimelineContainer items={timelineData} renderItem={renderTimelineItem} />
       </PageContainer>
     </SeparationContainer>
+    </ScrollAnimationWrapper>
     </>
   )
 }

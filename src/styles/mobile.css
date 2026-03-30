@@ -226,6 +226,42 @@
         }
     }
 
+    /* Scroll-Triggered Animation: Slide from left */
+    @keyframes scroll-slide-from-left {
+        0% {
+            opacity: 0;
+            filter: blur(12px);
+            transform: translateX(-60px);
+        }
+        50% {
+            opacity: 1;
+            filter: blur(6px);
+        }
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateX(0);
+        }
+    }
+
+    /* Scroll-Triggered Animation: Slide from right */
+    @keyframes scroll-slide-from-right {
+        0% {
+            opacity: 0;
+            filter: blur(12px);
+            transform: translateX(60px);
+        }
+        50% {
+            opacity: 1;
+            filter: blur(6px);
+        }
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateX(0);
+        }
+    }
+
     .page-item {
         opacity: 1;
         will-change: opacity, filter, transform;
@@ -242,6 +278,29 @@
     /* Triggered when element enters viewport */
     .page-item.scroll-animate-in {
         animation: scroll-blur-fade-sharp 0.8s ease-out forwards;
+    }
+
+    /* Slide animations - initially hidden */
+    .page-item.scroll-slide-hidden {
+        opacity: 0;
+        filter: blur(12px);
+    }
+
+    .page-item.scroll-slide-hidden.scroll-slide-left {
+        transform: translateX(-60px);
+    }
+
+    .page-item.scroll-slide-hidden.scroll-slide-right {
+        transform: translateX(60px);
+    }
+
+    /* Slide animations - trigger */
+    .page-item.scroll-slide-hidden.scroll-slide-left.scroll-animate-in {
+        animation: scroll-slide-from-left 0.8s ease-out forwards;
+    }
+
+    .page-item.scroll-slide-hidden.scroll-slide-right.scroll-animate-in {
+        animation: scroll-slide-from-right 0.8s ease-out forwards;
     }
 
     /* Scroll to Top Button */
@@ -1940,6 +1999,101 @@
 
     /* ============================================================
        END FEATURED GRID SECTION
+       ============================================================ */
+
+    /* ============================================================
+       TIMELINE CONTAINER - Reusable Component (Mobile First)
+       ============================================================ */
+
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        padding: 20px 0;
+    }
+
+    .timeline-container::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--kis-background), rgba(14, 123, 79, 0.3));
+    }
+
+    .timeline-item {
+        display: flex;
+        gap: 24px;
+        padding: 20px 0;
+        position: relative;
+        margin-left: 32px;
+    }
+
+    .timeline-dot {
+        flex-shrink: 0;
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border: 2px solid var(--kis-background);
+        border-radius: 50%;
+        position: absolute;
+        left: -20px;
+        top: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 0 3px rgba(14, 123, 79, 0.1);
+    }
+
+    .timeline-item:hover .timeline-dot {
+        box-shadow: 0 0 0 5px rgba(14, 123, 79, 0.2);
+        transform: scale(1.25);
+    }
+
+    .timeline-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px;
+        background: rgb(255, 255, 255);
+        border-left: 3px solid var(--kis-background);
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        flex: 1;
+        min-width: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    .timeline-item:hover .timeline-content {
+        background: rgba(255, 255, 255, 1);
+        box-shadow: var(--kis-shadow);
+    }
+
+    .timeline-content h3 {
+        color: var(--kis-background);
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .timeline-content p {
+        color: #333333;
+        font-size: 0.7rem;
+        margin: 0;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .timeline-content span {
+        color: #888888;
+        font-size: 0.65rem;
+        font-weight: 500;
+    }
+
+    /* ============================================================
+       END TIMELINE CONTAINER
        ============================================================ */
 
 

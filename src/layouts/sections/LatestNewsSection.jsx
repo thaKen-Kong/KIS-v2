@@ -1,7 +1,7 @@
 import { ThemedButton } from "../../components/common/Button";
 import { MediaCard } from "../../components/common/Card";
 import { PageContainer, SeparationContainer } from "../../components/common/Container";
-import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
+import { ScrollAnimationWrapper, ScrollSlideWrapper } from "../../components/common/ScrollAnimationWrapper";
 import { Label, Line } from "../../components/common/Text";
 
 const newsList = [
@@ -22,6 +22,7 @@ export function LatestNewsSection() {
                     <Label text="NEWEST NEWS" classname="white shadow"/>
                     <p className="white-label">Stay updated with the latest campus news.</p>
                     {newsList.slice(0, 3).map((news, index) => (
+                        <ScrollSlideWrapper direction="left">
                         <MediaCard
                             key={`${news.title}-${index}`}
                             imageSrc={news.image}
@@ -32,6 +33,7 @@ export function LatestNewsSection() {
                             <p>{news.content}</p>
                             <ThemedButton className="btn stretched outline white card_btn">Read More</ThemedButton>
                         </MediaCard>
+                        </ScrollSlideWrapper>
                     ))}
                     <ThemedButton className="btn outline white contain" text="SHOW MORE NEWS"/>
                     <Line className="white-line thin"/>

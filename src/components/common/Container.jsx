@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Label } from "./Text";
+import { ScrollAnimationWrapper, ScrollSlideWrapper } from "./ScrollAnimationWrapper";
 
 export function PageContainer({children, className=""}) {
     return (
@@ -90,6 +91,27 @@ export function FeaturedGridSection({items = [], renderItem, getItemClass, class
                 <div className={`featured-grid__item ${getItemClass ? getItemClass(item, index + 1, false) : ''}`.trim()} key={index + 1}>
                     {renderItem(item, index + 1, false)}
                 </div>
+            ))}
+        </div>
+    )
+}
+
+export function TimelineContainer({items = [], renderItem, className = ""}) {
+    if (!items || items.length === 0) {
+        return null;
+    }
+
+    return (
+        <div className={`timeline-container ${className}`.trim()}>
+            {items.map((item, index) => (
+                <ScrollSlideWrapper direction="left">
+                <div className="timeline-item" key={index}>
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-content">
+                        {renderItem(item, index)}
+                    </div>
+                </div>
+                </ScrollSlideWrapper>
             ))}
         </div>
     )

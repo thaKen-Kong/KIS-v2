@@ -1,5 +1,5 @@
 import { PageContainer, SeparationContainer, FeaturedGridSection } from "../../components/common/Container";
-import { ScrollAnimationWrapper } from "../../components/common/ScrollAnimationWrapper";
+import { ScrollAnimationWrapper, ScrollSlideWrapper } from "../../components/common/ScrollAnimationWrapper";
 import { Label } from "../../components/common/Text";
 import { bg_1 } from "../../data/images";
 
@@ -51,11 +51,13 @@ export function AnnouncementSection() {
             <PageContainer className="vbox light-background vertical-padding">
                 <SeparationContainer className="vbox">
                     <Label text="ANNOUNCEMENTS" classname="shadow gradient-45deg"/>
+                    <ScrollSlideWrapper direction="right">
                     <FeaturedGridSection 
                         items={announcementItems} 
                         renderItem={renderAnnouncementItem}
                         getItemClass={getItemClass}
                     />
+                    </ScrollSlideWrapper>
                 </SeparationContainer>
             </PageContainer>
         </ScrollAnimationWrapper>
