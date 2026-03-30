@@ -1,5 +1,6 @@
 import { Bubble } from "../../components/common/Bubble";
 import { PageContainer, SeparationContainer } from "../../components/common/Container";
+import { AnnouncementSection } from "../../layouts/sections/AnnouncementSection";
 import { HeroSection } from "../../layouts/sections/HeroSection";
 import { InteractWithUsSection } from "../../layouts/sections/InteractWithUsSection";
 import { LatestNewsSection } from "../../layouts/sections/LatestNewsSection";
@@ -10,11 +11,12 @@ import { UpcomingEventsSection } from "../../layouts/sections/UpcomingEventsSect
 export function HomePage({children}) {
     const sections = [
         { component: HeroSection, delay: 0 },
-        { component: OverviewSection, delay: 1 },
-        { component: LatestNewsSection, delay: 2 },
-        { component: UpcomingEventsSection, delay: 3 },
-        { component: SneekPeekSection, delay: 4 },
-        { component: InteractWithUsSection, delay: 5 },
+        { component: AnnouncementSection, delay: 1},
+        { component: OverviewSection, delay: 2 },
+        { component: LatestNewsSection, delay: 3},
+        { component: UpcomingEventsSection, delay: 4 },
+        { component: SneekPeekSection, delay: 5 },
+        { component: InteractWithUsSection, delay: 6 },
     ]
 
     return (

@@ -15,7 +15,7 @@ export function LatestNewsSection() {
     return (
         <>
         <ScrollAnimationWrapper>
-            <PageContainer className="green vbox vertical-padding shadow-box">
+            <PageContainer className="green-gradient-dull vbox vertical-padding shadow-box">
                 
                 <SeparationContainer className="vbox">
                     <Line className="white-line thin"/>

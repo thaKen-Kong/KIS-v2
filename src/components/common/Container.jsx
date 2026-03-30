@@ -71,3 +71,26 @@ export function HorizontalScrollableContainer({items = [], className=""}) {
         </>
     )
 }
+
+export function FeaturedGridSection({items = [], renderItem, getItemClass, className = ""}) {
+    if (!items || items.length === 0) {
+        return null;
+    }
+
+    const featuredItem = items[0];
+    const regularItems = items.slice(1);
+
+    return (
+        <div className={`featured-grid ${className}`.trim()}>
+            <div className={`featured-grid__featured ${getItemClass ? getItemClass(featuredItem, 0, true) : ''}`.trim()}>
+                {renderItem(featuredItem, 0, true)}
+            </div>
+
+            {regularItems.map((item, index) => (
+                <div className={`featured-grid__item ${getItemClass ? getItemClass(item, index + 1, false) : ''}`.trim()} key={index + 1}>
+                    {renderItem(item, index + 1, false)}
+                </div>
+            ))}
+        </div>
+    )
+}
