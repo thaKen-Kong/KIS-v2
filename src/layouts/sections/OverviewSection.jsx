@@ -22,7 +22,7 @@ export function OverviewSection( {children} ) {
 
                     </ItemContainer>
                     <TwoContainer 
-
+                    
                     leftTitle="ABOUT US"
                     leftContent={[<p>Kaytitinga Integrated School provides a safe, supportive learning environment that builds strong foundations in academics and character.</p>, <ThemedButton text="LEARN MORE" className="stretched"/>]}
                     rightTitle="JOIN US"

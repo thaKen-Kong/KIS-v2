@@ -109,6 +109,35 @@ export function ItemContainer({children,  className, header}) {
                     <div className="item-container__content">
                         {children}
                     </div>
+
+            </div>
+        </>
+    )
+}
+
+export function Container({children, className = ""}) {
+    return (
+    <>
+        <div className={`column-container ${className}`}>
+            {children}
+            
+        </div>
+    </>
+    )
+}
+
+export function ImageContainer({children,className = "", variant = "", image, content=[]}) {
+    return (
+        <>
+            <div className={`image-container ${className} ${variant}`}>
+                <img src={image} alt="image" />
+                {content.length > 0 ? (
+                    <div className="info-body">
+                        {content.map((items, index)=> {
+                            return items
+                        })}
+                    </div>
+                    ) : (<></>)}
             </div>
         </>
     )
