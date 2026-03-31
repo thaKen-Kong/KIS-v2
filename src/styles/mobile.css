@@ -613,6 +613,8 @@
         flex: 1;
         padding: 2px;
         display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     
     .item-container.frame iframe {
@@ -1182,11 +1184,17 @@
     }
 
     .md-h {
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .lg-h {
-        min-width: 400px;
+        min-height: 400px;
+    }
+
+    ul {
+        font-size: 0.7rem;
+        width: 100%;
+        padding: 10px;
     }
 
     /* PAGE HEADER UI */

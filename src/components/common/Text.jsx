@@ -26,3 +26,13 @@ export function Line( {className =""}) {
         </>
     )
 }
+
+export function TextComponent({text, className=""}) {
+    return (
+        <>
+            <div className={`text ${className}`}>
+                <p>{text}</p>
+            </div>
+        </>
+    )
+}
