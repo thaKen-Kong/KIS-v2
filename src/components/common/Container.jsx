@@ -22,25 +22,7 @@ export function SeparationContainer({children, className=""}) {
     )
 }
 
-export function ItemContainer( {children, className=""}) {
-    return (
-        <>
-            <div className={`item-container ${className}`}>
-                {children}
-            </div>
-        </>
-    )
-}
 
-export function TextContainer({children, className=""}){
-    return (
-        <>
-            <div className={`text-container ${className}`}>
-                {children}
-            </div>
-        </>
-    )
-}
 
 export function TwoContainer({leftTitle, leftContent, rightTitle, rightContent, className=""}){
     return (
@@ -114,5 +96,20 @@ export function TimelineContainer({items = [], renderItem, className = ""}) {
                 </ScrollSlideWrapper>
             ))}
         </div>
+    )
+}
+
+
+
+export function ItemContainer({children,  className, header}) {
+    return (
+        <>
+            <div className={`item-container ${className}`}>
+                    {header}
+                    <div className="item-container__content">
+                        {children}
+                    </div>
+            </div>
+        </>
     )
 }

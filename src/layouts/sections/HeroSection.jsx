@@ -8,7 +8,7 @@ export function HeroSection() {
         <>
         <ScrollAnimationWrapper>
             <PageContainer className="hero-section darken box-shadow">
-                    <Label text="KIS" classname="shadow enlarged animation gradient" />
+                    <Label text="KIS" classname="shadow enlarged gradient thicken" />
                 <img src={bg_1} alt="Background Image"/>
             </PageContainer>
         </ScrollAnimationWrapper>
